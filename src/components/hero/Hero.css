@@ -1,0 +1,135 @@
+.hero-section {
+  background-color: var(--color-beige-200);
+  height: 100vh;
+  height: 100svh;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 62px;
+
+  .video-container {
+    flex: 1;
+    min-height: 0;
+    position: relative;
+    background-color: var(--color-bg-200);
+    overflow: hidden;
+    --overlay-opacity: 0;
+  }
+
+  .video-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0) 10%,
+      rgba(0, 0, 0, 0.7) 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+    opacity: var(--overlay-opacity);
+  }
+
+  .hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .agency {
+    padding-inline: 24px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    padding-block: 6px;
+    margin-inline: auto;
+  }
+
+  .label {
+    overflow: hidden;
+  }
+
+  .label-inner {
+    font-size: 14px;
+    line-height: 1.786;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1%;
+    display: inline-block;
+  }
+
+  .heading {
+    container-type: inline-size;
+    width: 100%;
+    padding-inline: 24px;
+    margin-inline: auto;
+  }
+
+  .text-images {
+    display: flex;
+    align-items: end;
+    transform: translateY(-20%);
+    gap: 0.747%;
+  }
+
+  .letter {
+    flex-grow: var(--w);
+    flex-shrink: 1;
+    flex-basis: 0;
+    min-width: 0;
+    overflow: hidden;
+    width: calc(var(--w) * 1%);
+  }
+
+  .letter-inner {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .letter-g {
+    transform: translateY(25%);
+  }
+
+  .second-word {
+    padding-left: 3.9%;
+  }
+
+  @media (max-width: 1280px) {
+  }
+
+  @media (max-width: 1024px) {
+    & {
+      gap: 38px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    & {
+      gap: 24px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .agency {
+      padding-inline: 16px;
+    }
+    .heading {
+      padding-inline: 16px;
+    }
+  }
+
+  @media (max-width: 440px) {
+  }
+
+  @media (min-width: 1536px) {
+    .label-inner {
+      font-size: 16px;
+    }
+  }
+}

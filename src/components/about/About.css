@@ -1,0 +1,155 @@
+.about-us {
+  height: 100vh;
+  background-color: var(--color-bg-dark);
+  color: var(--color-bg);
+  padding-inline: 24px;
+  padding-block: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .container {
+    margin-inline: auto;
+  }
+
+  .heading {
+    font-family:
+      Clash Display,
+      sans-serif;
+    font-weight: 400;
+    letter-spacing: 1%;
+    font-size: 28px;
+  }
+
+  .paragraph {
+    font-size: 38px;
+    font-size: clamp(1.75rem, 1.2rem + 1.25vw, 3.5rem);
+    font-weight: 300;
+    line-height: 1.3;
+    margin-top: clamp(68px, 7vw, 110px);
+    letter-spacing: 1%;
+    visibility: hidden;
+  }
+
+  .paragraph .indent {
+    display: inline-block;
+    width: 28%;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    opacity: 80%;
+  }
+
+  .stat {
+    position: relative;
+    /* border: 1px solid white; */
+  }
+  .stat::after {
+    content: "";
+    position: absolute;
+    bottom: -18px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-bg);
+    transform: scaleX(var(--stat-underline, 1));
+    transform-origin: left center;
+    will-change: transform;
+  }
+
+  .top {
+    display: flex;
+    align-items: start;
+    gap: 1.5px;
+    margin-top: 6px;
+  }
+  .top > span:first-child {
+    font-family:
+      Clash Display,
+      sans-serif;
+    font-weight: 400;
+    font-size: clamp(32px, calc(29.622px + 0.541vw), 40px);
+    line-height: 1.37;
+  }
+  .top > span:last-child {
+    font-size: 14px;
+  }
+  .counter {
+    position: relative;
+    display: inline-block;
+  }
+  .counter-ghost {
+    opacity: 0;
+  }
+  .counter-value {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .bottom p {
+    max-width: 257px;
+    font-weight: 300;
+  }
+
+  /* small laptops */
+  @media (max-width: 1280px) {
+    & {
+      height: auto;
+    }
+    .stats {
+      margin: clamp(88px, calc(57.538px + 8.462vw), 220px) 0 0;
+    }
+  }
+
+  /* tablets in landscape */
+  @media (max-width: 1024px) {
+    .stats {
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 28px;
+      column-gap: 4px;
+      margin-top: 180px;
+    }
+  }
+
+  /* tablets in portrait */
+  @media (max-width: 768px) {
+    .stats {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 32px;
+    }
+  }
+
+  /* large phones  */
+  @media (max-width: 640px) {
+    & {
+      padding-inline: 16px;
+    }
+    .paragraph {
+      font-size: 28px;
+      line-height: 1.36;
+      margin-top: 68px;
+    }
+  }
+
+  /* regular phones  */
+  @media (max-width: 480px) {
+    .stats {
+      margin-top: 88px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .bottom p {
+      max-width: none;
+    }
+    
+  }
+
+  @media (min-width: 480px) {
+    .stat::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1536px) {
+  }
+}

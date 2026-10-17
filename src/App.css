@@ -1,0 +1,12 @@
+.parent {
+  border: 1px solid green;
+  width: fit-content;
+  overflow: visible;
+}
+
+.child {
+  height: 200px;
+  width: 200px;
+  background-color: gray;
+  clip-path: inset(-20px);
+}

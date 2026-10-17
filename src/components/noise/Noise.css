@@ -1,0 +1,50 @@
+.grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.2;
+  mix-blend-mode: overlay;
+  background-repeat: repeat;
+  width: 300%;
+  height: 300%;
+  animation: grain-shift 0.4s steps(6) infinite;
+
+  /* background-color: green; */
+}
+
+@keyframes grain-shift {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, -5%);
+  }
+  30% {
+    transform: translate(-7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, -25%);
+  }
+  50% {
+    transform: translate(-15%, -10%);
+  }
+  60% {
+    transform: translate(-15%, 0%);
+  }
+  70% {
+    transform: translate(0%, -15%);
+  }
+  80% {
+    transform: translate(-3%, -35%);
+  }
+  90% {
+    transform: translate(-10%, -10%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

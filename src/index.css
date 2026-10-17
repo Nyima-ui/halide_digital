@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url(./assets/fonts/ClashDisplay-Extralight.woff2);
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url(./assets/fonts/ClashDisplay-Light.woff2);
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url(./assets/fonts/ClashDisplay-Regular.woff2);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url(./assets/fonts/ClashDisplay-Medium.woff2);
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url(./assets/fonts/ClashDisplay-Semibold.woff2);
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url(./assets/fonts/ClashDisplay-Bold.woff2);
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-body: "Manrope", sans-serif;
+  --font-display: "Clash Display", sans-serif;
+
+  --fs-h1: 138px;
+  --fs-h2: 67px;
+  --fs-h3: 51px;
+  --fs-h4: 38px;
+  --fs-h5: 28px;
+  --fs-h6: 21px;
+  --fs-p: 16px;
+  --fs-c: 15px;
+
+  /* base colors  */
+  --color-bg: #f9f8f5;
+  --color-bg-dark: #1d1d1c;
+  --color-text: #161615;
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  /* color ink  */
+  --color-ink-900: #070707;
+  --color-ink-800: #0e0e0e;
+  --color-ink-700: #161615;
+  --color-ink-600: #1d1d1c;
+  --color-ink-500: #242423;
+  --color-ink-400: #50504f;
+  --color-ink-300: #7c7c7b;
+  --color-ink-200: #a7a7a7;
+  --color-ink-100: #d3d3d3;
+
+  /* color slate  */
+  --color-slate-900: #0e0e0e;
+  --color-slate-800: #1c1b1d;
+  --color-slate-700: #2b292b;
+  --color-slate-600: #39363a;
+  --color-slate-500: #474448;
+  --color-slate-400: #6c696d;
+  --color-slate-300: #918f91;
+  --color-slate-200: #b5b4b6;
+  --color-slate-100: #dadada;
+
+  /* color beige  */
+  --color-beige-900: #2d2c29;
+  --color-beige-800: #5a5853;
+  --color-beige-700: #86857c;
+  --color-beige-600: #b3b1a6;
+  --color-beige-500: #e0ddcf;
+  --color-beige-400: #e6e4d9;
+  --color-beige-300: #ecebe2;
+  --color-beige-200: #f3f1ec;
+  --color-beige-100: #f9f8f5;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+}
